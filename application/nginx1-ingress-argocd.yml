@@ -22,4 +22,4 @@ spec:
   tls:
   - hosts:
     - local.nginx
-    secretName: nginx1-tls-secret
+    secretName: argocd-tls-secret

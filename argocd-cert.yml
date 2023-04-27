@@ -2,9 +2,9 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: nginx1-cert
-  namespace: nginx1
+  namespace: argocd
 spec:
-  secretName: nginx1-tls-secret
+  secretName: argocd-tls-secret
   duration: 170000h
   renewBefore: 72h
   issuerRef:
