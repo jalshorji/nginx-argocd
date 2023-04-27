@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nginx1-cert
+  namespace: nginx1
+spec:
+  secretName: nginx1-tls-secret
+  duration: 170000h
+  renewBefore: 72h
+  issuerRef:
+    kind: Issuer
+    name: selfsigned
+  commonName: "local.nginx"
+  isCA: true
+  dnsNames:
+    - local.nginx
+
